@@ -1,5 +1,4 @@
 import React from "react";
-import { FaTwitter, FaInstagram, FaFacebookF } from "react-icons/fa";
 import jim from "../assets/team/jim.png";
 import josh from "../assets/team/josh.png";
 import joemarie from "../assets/team/joemarie.png";
