@@ -14,7 +14,7 @@ module.exports = {
       }),
     },
     fontFamily: {
-      custom: ["Yatra One", "sans-serif"],
+      custom: ["Poppins", "sans-serif"],
     },
   },
   plugins: [],

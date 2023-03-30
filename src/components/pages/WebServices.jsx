@@ -37,7 +37,12 @@ const WebServices = () => {
   return (
     <>
       <Nav />
-      <div>
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+        exit="exit"
+      >
         <div className="relative w-full h-96 ">
           <img
             initial={{ opacity: 0 }}
@@ -207,11 +212,9 @@ const WebServices = () => {
                 />
               </div>
             </div>
-
-            <Footer />
           </div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };

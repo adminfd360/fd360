@@ -9,6 +9,10 @@ import { AnimatePresence } from "framer-motion";
 import CommunicationServices from "./components/pages/CommunicationServices";
 import ManagedNetwork from "./components/pages/ManagedNetwork";
 import WebServices from "./components/pages/WebServices";
+import CyberSecurity from "./components/pages/CyberSecurity";
+import Support from "./components/pages/Support";
+import Footer from "./components/Footer";
+import MultiFunctionalProductServices from "./components/pages/MultiFunctionalProductServices";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <>
@@ -20,7 +24,14 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/communication" element={<CommunicationServices />} />
         <Route path="/managednetwork" element={<ManagedNetwork />} />
         <Route path="/webservices" element={<WebServices />} />
+        <Route path="/cybersecurity" element={<CyberSecurity />} />
+        <Route path="/support" element={<Support />} />
+        <Route
+          path="/multifunctional"
+          element={<MultiFunctionalProductServices />}
+        />
       </Routes>
+      <Footer />
     </Router>
   </>
 );

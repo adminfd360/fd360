@@ -105,7 +105,7 @@ const ContactUs = () => {
             />
           </div>
         </div>
-        <div className="flex flex-col items-center justify-center my-8">
+        <div className="flex flex-col items-center justify-center ">
           <div className="flex items-center justify-center mb-4">
             <FaMapMarkerAlt size={24} />
             <p className="ml-2">
@@ -169,7 +169,6 @@ const ContactUs = () => {
             </button>
           </form>
         </div>
-        <Footer />
       </motion.div>
     </>
   );

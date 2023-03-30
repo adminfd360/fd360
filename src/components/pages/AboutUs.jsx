@@ -239,7 +239,6 @@ const AboutUs = () => {
           <div className="flex justify-center items-center mt-4">
             <FiChevronDown className="text-2xl animate-bounce" />
           </div>
-          <Footer />
         </div>
       </motion.div>
     </>

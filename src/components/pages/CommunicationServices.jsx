@@ -307,7 +307,6 @@ const CommunicationServices = () => {
               </p>
             </div>
           </div>
-          <Footer />
         </motion.div>
       </motion.div>
     </>

@@ -12,7 +12,16 @@ function Nav() {
           <div className="flex items-center w-full">
             <div className="flex items-center w-full mx-20">
               <div className="flex items-center justify-center flex-shrink-0 ">
-                <img className="h-8 w-8" src="/fd360favicon.png" alt="Logo" />
+                <img
+                  className="h-12 w-12"
+                  src="/fd360favicon.png"
+                  alt="Veteran Owned and operated"
+                />
+                <img
+                  className="h-16 md:w-36"
+                  src="/fd360veteran-white.png"
+                  alt="Logo"
+                />
               </div>
               <div className="hidden md:block z-50 mx-auto">
                 <div className="flex items-baseline ml-10 space-x-4">
@@ -40,7 +49,7 @@ function Nav() {
                   >
                     <div className="absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-xs sm:px-0">
                       <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
-                        <div className="relative grid gap-6 bg-blue-400 bg-opacity-50 bg-clip-padding backdrop-blur-sm px-5 py-6 sm:gap-8 sm:p-8  ">
+                        <div className="relative grid gap-6 bg-blue-400 bg-opacity-50 bg-clip-padding backdrop-opacity-50 px-5 py-6 sm:gap-8 sm:p-8  ">
                           <Link
                             to="/communication"
                             className="-m-3 p-3 flex items-center space-x-4 rounded-lg hover:bg-blue-400 transition ease-in-out duration-150"
@@ -82,7 +91,7 @@ function Nav() {
                             </div>
                           </Link>
                           <Link
-                            to="/services"
+                            to="/cybersecurity"
                             className="-m-3 p-3 flex items-center space-x-4 rounded-lg hover:bg-blue-400 transition ease-in-out duration-150"
                           >
                             <img
@@ -94,13 +103,26 @@ function Nav() {
                               Cyber & Network Security Services
                             </div>
                           </Link>
+                          <Link
+                            to="/multifunctional"
+                            className="-m-3 p-3 flex items-center space-x-4 rounded-lg hover:bg-blue-400 transition ease-in-out duration-150"
+                          >
+                            <img
+                              className="h-8 w-8"
+                              src="/fd360favicon.png"
+                              alt="Logo"
+                            />
+                            <div className="text-base font-medium text-green-400">
+                              Multi Functional Product Services
+                            </div>
+                          </Link>
                         </div>
                       </div>
                     </div>
                   </Transition>
                   <Link
                     activeClass="about"
-                    to="/about"
+                    to="/support"
                     smooth={true}
                     offset={50}
                     duration={500}
@@ -143,7 +165,7 @@ function Nav() {
                 </div>
               </div>
             </div>
-            <div className="flex items-center justify-center flex-shrink-0 mr-10">
+            <div className="flex items-center justify-center flex-shrink-0 md:mr-10">
               {" "}
               <Link
                 activeClass="contact"
@@ -216,7 +238,7 @@ function Nav() {
             <div className="md:hidden z-50" id="mobile-menu">
               <div
                 ref={ref}
-                className="rounded-2xl px-2 pt-2 pb-3 space-y-1 bg-blue-400 bg-opacity-50 bg-clip-padding backdrop-blur-sm sm:px-3"
+                className="rounded-2xl px-2 pt-2 pb-3 space-y-1 bg-blue-400 bg-opacity-50 bg-clip-padding backdrop-opacity-50 sm:px-3"
               >
                 <Link
                   href="/"
@@ -287,7 +309,7 @@ function Nav() {
                           </div>
                         </Link>
                         <Link
-                          to="/services"
+                          to="/cybersecurity"
                           className="-m-3 p-3 flex items-center space-x-4 rounded-lg hover:bg-blue-400 transition ease-in-out duration-150"
                         >
                           <img
@@ -299,13 +321,26 @@ function Nav() {
                             Cyber & Network Security Services
                           </div>
                         </Link>
+                        <Link
+                          to="/multifunctional"
+                          className="-m-3 p-3 flex items-center space-x-4 rounded-lg hover:bg-blue-400 transition ease-in-out duration-150"
+                        >
+                          <img
+                            className="h-8 w-8"
+                            src="/fd360favicon.png"
+                            alt="Logo"
+                          />
+                          <div className="text-base font-medium text-green-400">
+                            Multi Functional Product Services
+                          </div>
+                        </Link>
                       </div>
                     </div>
                   </div>
                 </Transition>
 
                 <Link
-                  href="/about"
+                  href="/support"
                   activeClass="about"
                   to="about"
                   smooth={true}

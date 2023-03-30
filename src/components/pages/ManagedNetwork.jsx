@@ -197,7 +197,6 @@ const ManagedNetwork = () => {
                 </p>
               </div>
             </div>
-            <Footer />
           </div>
         </div>
       </motion.div>
