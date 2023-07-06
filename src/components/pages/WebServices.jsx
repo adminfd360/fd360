@@ -43,7 +43,7 @@ const WebServices = () => {
         animate="visible"
         exit="exit"
       >
-        <div className="relative w-full h-96 ">
+        <div className="relative w-full h-[600px] ">
           <img
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -53,9 +53,10 @@ const WebServices = () => {
             className="object-cover w-full h-full"
           />
           <div className="absolute inset-0  flex items-center justify-center">
-            <div className="text-white text-center font-custom">
+            <div className=" text-center ">
               <motion.h1
-                className="text-4xl font-bold mb-4"
+                className="font-bold mb-4 md:text-6xl text-4xl text-green-400 "
+                id="title"
                 initial={{ opacity: 0, x: "-100vh" }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 2 }}
@@ -71,71 +72,239 @@ const WebServices = () => {
             </div>
           </div>
         </div>
-        <div className="bg-gray-100 py-8 px-4 font-custom mb-10 flex justify-center">
+        <div className="bg-gradient-to-t from-[#d2ffff] to-[#0694c6] rounded-lg py-8 px-4 font-custom flex justify-center">
           <motion.div
-            className="max-w-3xl mx-auto text-center"
+            className=" text-center justify-center"
             initial={{ opacity: 0, x: "300vh" }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 2 }}
           >
-            <h1 className="text-3xl font-bold mb-4">Web Design</h1>
-            <img src={fd360webdesign} alt="fd360 web design" />
+            <h1 className="text-3xl text-black font-bold mb-4">Web Design</h1>
+            <img
+              src={fd360webdesign}
+              alt="fd360 web design"
+              className="mx-auto"
+            />
+            <motion.p
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              transition={{ duration: 0.3 }}
+              variants={{
+                visible: { opacity: 1, scale: 1 },
+                hidden: { opacity: 0, scale: 0 },
+              }}
+              className="text-2xl"
+            >
+              Using our custom-built approach, we design, develop, implement,
+              ensure quality assurance, maintain, and support a website from
+              scratch.
+            </motion.p>
+            <motion.p
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              transition={{ duration: 0.3 }}
+              variants={{
+                visible: { opacity: 1, scale: 1 },
+                hidden: { opacity: 0, scale: 0 },
+              }}
+              className="text-xl p-5"
+            >
+              We will take your vision and bring it to life with our Web
+              Services Package! A business who had online presence has a massive
+              impact on a company's success. Majority of customers will visit
+              your business digitally rather than driving to your store, which
+              takes them a lot of time. "Time is GOLD". Building a website for
+              your business could reach these unreachable customers. Your
+              business might be local, but you might be able to sell your
+              products or services to a wider market, whether it be people in
+              the next town, the nation as a whole or even the International
+              market.
+            </motion.p>
           </motion.div>
         </div>
-        <div className="bg-gray-100 py-8 px-4 font-custom">
-          <div className="max-w-full mx-auto text-center">
-            <div className="flex flex-col md:flex-row justify-center">
-              <div className="md:w-full p-4">
-                <p className="text-3xl">
-                  Using our custom-built approach, we design, develop,
-                  implement, ensure quality assurance, maintain, and support a
-                  website from scratch.
-                </p>
-              </div>
+        <div className="bg-gradient-to-t from-[#d2ffff] to-[#0694c6] rounded-lg py-8 px-4 font-custom flex">
+          <div className="md:flex">
+            <div className="bg-white md:text-lg  text-base rounded-md bg-opacity-40 bg-clip-padding backdrop-opacity-50 shadow-lg p-4 flex-1 m-2">
+              <motion.p
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                transition={{ duration: 0.3 }}
+                variants={{
+                  visible: { opacity: 1, scale: 1 },
+                  hidden: { opacity: 0, scale: 0 },
+                }}
+              >
+                1. Full Website Design and Development: <br />
+                We custom build a website from scratch including design,
+                implementation, quality assurance, maintenance and support.
+              </motion.p>
             </div>
+            <div className="bg-white md:text-lg  text-base rounded-md bg-opacity-40 bg-clip-padding backdrop-opacity-50 shadow-lg p-4 flex-1 m-2">
+              {" "}
+              <motion.p
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                transition={{ duration: 0.3 }}
+                variants={{
+                  visible: { opacity: 1, scale: 1 },
+                  hidden: { opacity: 0, scale: 0 },
+                }}
+              >
+                2. Redesign:
+                <br /> Migrate your existing website with all your data to an
+                updated modern solution (maybe another content management
+                system) through the convenient and responsive user interface.
+              </motion.p>
+            </div>
+            <div className="bg-white md:text-lg  text-base rounded-md bg-opacity-40 bg-clip-padding backdrop-opacity-50 shadow-lg p-4 flex-1 m-2">
+              <motion.p
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                transition={{ duration: 0.3 }}
+                variants={{
+                  visible: { opacity: 1, scale: 1 },
+                  hidden: { opacity: 0, scale: 0 },
+                }}
+              >
+                3. Web application development and integration:
+                <br /> Enrich your website with ready-made and customizable
+                social media applications, payment solutions, advanced analytics
+                and other tools to increase user engagement.
+              </motion.p>
+            </div>
+          </div>
+        </div>
+        <div className="bg-gradient-to-t from-[#d2ffff] to-[#0694c6] rounded-lg py-8 px-4 font-custom flex">
+          <div className="md:flex">
+            <div className="bg-white md:text-lg  text-base rounded-md bg-opacity-40 bg-clip-padding backdrop-opacity-50 shadow-lg p-4 flex-1 m-2">
+              <motion.p
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                transition={{ duration: 0.3 }}
+                variants={{
+                  visible: { opacity: 1, scale: 1 },
+                  hidden: { opacity: 0, scale: 0 },
+                }}
+              >
+                4. Migration to the cloud:
+                <br /> To improve scalability, manageability, and cost
+                reduction, migrate your existing websites and applications to
+                another cloud service platform.
+              </motion.p>
+            </div>
+            <div className="bg-white md:text-lg  text-base rounded-md bg-opacity-40 bg-clip-padding backdrop-opacity-50 shadow-lg p-4 flex-1 m-2">
+              <motion.p
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                transition={{ duration: 0.3 }}
+                variants={{
+                  visible: { opacity: 1, scale: 1 },
+                  hidden: { opacity: 0, scale: 0 },
+                }}
+              >
+                5. Maintenance and support: <br />• Improved scalability and
+                performance to meet growing numbers of visitors and data.
+                <br /> • Fixing bugs - Improving your website structure to
+                better meet user expectations is essential to increasing brand
+                engagement. <br />• We perform security audits and updates to
+                protect your data and users. , which involves performing SSL/TLS
+                certificate validation on a per-user basis for use by the
+                client.
+              </motion.p>
+            </div>
+            <div className="bg-white md:text-lg  text-base rounded-md bg-opacity-40 bg-clip-padding backdrop-opacity-50 shadow-lg p-4 m-2 flex-1">
+              <motion.p
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                transition={{ duration: 0.3 }}
+                variants={{
+                  visible: { opacity: 1, scale: 1 },
+                  hidden: { opacity: 0, scale: 0 },
+                }}
+              >
+                6. Mobile friendly development For a better mobile and tablet
+                view, we use your portal as a backend. <br /> Why Choose US?
+                <br />• We build the foundation of your online Presence and
+                ensure that your business Stands out from the rest by using the
+                Robust technologies in the industry. Interactive, media-rich and
+                personalized to make your visitors stay engaged
+              </motion.p>
+            </div>
+          </div>
+        </div>
+        <div className="bg-gradient-to-t from-[#d2ffff] to-[#0694c6] rounded-lg py-8 px-4 font-custom">
+          <div className="max-w-full mx-auto text-center">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-5 w-full">
-              <div className="bg-white rounded-lg shadow-lg p-4 ">
-                <motion.h1
+              <div className="bg-white rounded-md bg-opacity-40 bg-clip-padding backdrop-opacity-50 shadow-lg p-4 ">
+                <motion.h2
                   className="text-gray-700 mt-4 font-custom text-2xl mx-auto"
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
+                  initial="hidden"
+                  whileInView="visible"
                   viewport={{ once: true }}
+                  transition={{ duration: 0.3 }}
+                  variants={{
+                    visible: { opacity: 1, scale: 1 },
+                    hidden: { opacity: 0, scale: 0 },
+                  }}
                 >
                   SSL
                   <br />
                   Our web services include secured connection
-                </motion.h1>
+                </motion.h2>
                 <motion.img
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
+                  initial="hidden"
+                  whileInView="visible"
                   viewport={{ once: true }}
+                  transition={{ duration: 0.3 }}
+                  variants={{
+                    visible: { opacity: 1, scale: 1 },
+                    hidden: { opacity: 0, scale: 0 },
+                  }}
                   src={fd360ssl}
                   alt="fd360-ssl"
                   className="mx-auto"
                 />
               </div>
-              <div className="bg-white rounded-lg shadow-lg p-4 ">
-                <motion.h1
+              <div className="bg-white rounded-md bg-opacity-40 bg-clip-padding backdrop-opacity-50 shadow-lg p-4 ">
+                <motion.h2
                   className="text-gray-700 mt-4 font-custom text-2xl mx-auto"
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
+                  initial="hidden"
+                  whileInView="visible"
                   viewport={{ once: true }}
+                  transition={{ duration: 0.3 }}
+                  variants={{
+                    visible: { opacity: 1, scale: 1 },
+                    hidden: { opacity: 0, scale: 0 },
+                  }}
                 >
                   Domain Name
                   <br />
                   We can help register your name
-                </motion.h1>
+                </motion.h2>
                 <motion.img
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
+                  initial="hidden"
+                  whileInView="visible"
                   viewport={{ once: true }}
+                  transition={{ duration: 0.3 }}
+                  variants={{
+                    visible: { opacity: 1, scale: 1 },
+                    hidden: { opacity: 0, scale: 0 },
+                  }}
                   src={fd360domain}
                   alt="fd360-domain-name"
                   className="mx-auto"
                 />
               </div>
-              <div className="bg-white rounded-lg shadow-lg p-4 ">
-                <motion.h1
+              <div className="bg-white rounded-md bg-opacity-40 bg-clip-padding backdrop-opacity-50 shadow-lg p-4 ">
+                <motion.h2
                   className="text-gray-700 mt-4 font-custom text-2xl mx-auto"
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
@@ -144,18 +313,23 @@ const WebServices = () => {
                   Hosting
                   <br />
                   We offer hosting services
-                </motion.h1>
+                </motion.h2>
                 <motion.img
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
+                  initial="hidden"
+                  whileInView="visible"
                   viewport={{ once: true }}
+                  transition={{ duration: 0.3 }}
+                  variants={{
+                    visible: { opacity: 1, scale: 1 },
+                    hidden: { opacity: 0, scale: 0 },
+                  }}
                   src={fd360hosting}
                   alt="fd360-hosting"
                   className="mx-auto"
                 />
               </div>
-              <div className="bg-white rounded-lg shadow-lg p-4 ">
-                <motion.h1
+              <div className="bg-white rounded-md bg-opacity-40 bg-clip-padding backdrop-opacity-50 shadow-lg p-4 ">
+                <motion.h2
                   className="text-gray-700 mt-4 font-custom text-2xl mx-auto"
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
@@ -165,11 +339,16 @@ const WebServices = () => {
                   <br />
                   We make sure the “back end” stuff going that keeps your
                   website live, actually viewable on the internet
-                </motion.h1>
+                </motion.h2>
                 <motion.img
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
+                  initial="hidden"
+                  whileInView="visible"
                   viewport={{ once: true }}
+                  transition={{ duration: 0.3 }}
+                  variants={{
+                    visible: { opacity: 1, scale: 1 },
+                    hidden: { opacity: 0, scale: 0 },
+                  }}
                   src={fd360management}
                   alt="fd360-management"
                   className="mx-auto"
@@ -177,21 +356,49 @@ const WebServices = () => {
               </div>
             </div>
             <div className="grid max-w-3xl grid-cols-1 mx-auto">
-              <div className="bg-white rounded-lg shadow-lg p-4 ">
-                <motion.h1
+              <div className="bg-white rounded-md bg-opacity-40 bg-clip-padding backdrop-opacity-50 shadow-lg p-4 ">
+                <motion.h2
                   className="text-gray-700 mt-4 font-custom text-2xl mx-auto"
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
+                  initial="hidden"
+                  whileInView="visible"
                   viewport={{ once: true }}
+                  transition={{ duration: 0.3 }}
+                  variants={{
+                    visible: { opacity: 1, scale: 1 },
+                    hidden: { opacity: 0, scale: 0 },
+                  }}
                 >
                   SEO
                   <br />
+                  <motion.img
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.3 }}
+                    variants={{
+                      visible: { opacity: 1, scale: 1 },
+                      hidden: { opacity: 0, scale: 0 },
+                    }}
+                    src={fd360seo}
+                    alt="fd360-seo"
+                    className="mx-auto"
+                  />
                   Search engine optimization involves a combination of on-page
                   (maintenance-level) and off-page (management-level) tasks to
                   improve/maintain your ranking performance. SEO upkeep may
                   include:
                   <br />
-                  <p className="text-left">
+                  <motion.p
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.3 }}
+                    variants={{
+                      visible: { opacity: 1, scale: 1 },
+                      hidden: { opacity: 0, scale: 0 },
+                    }}
+                    className="text-left"
+                  >
                     • Adding keywords
                     <br />• Adding or revising meta data for all on-page
                     elements, including the page itself and all images and
@@ -200,16 +407,8 @@ const WebServices = () => {
                     and/or page rendering conforms to search engine-preferred
                     data structures
                     <br />• Cultivating quality inbound links to your website
-                  </p>
-                </motion.h1>
-                <motion.img
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  viewport={{ once: true }}
-                  src={fd360seo}
-                  alt="fd360-seo"
-                  className="mx-auto"
-                />
+                  </motion.p>
+                </motion.h2>
               </div>
             </div>
           </div>

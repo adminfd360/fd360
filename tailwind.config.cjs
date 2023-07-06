@@ -6,6 +6,9 @@ module.exports = {
       backgroundImage: {
         "fd360-bg": "url('./src/assets/fd360-background.jpg')",
       },
+      boxShadow: {
+        "3xl": "0 5px 50px -15px rgba(255,255,212,1)",
+      },
       backdropBlur: {
         sm: "4px",
       },

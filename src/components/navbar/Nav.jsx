@@ -10,31 +10,31 @@ function Nav() {
       <nav className="absolute z-50 w-full shadow-sm bg-transparent font-custom">
         <div className="w-full">
           <div className="flex items-center w-full">
-            <div className="flex items-center w-full mx-20">
-              <div className="flex items-center justify-center flex-shrink-0 ">
+            <div className="flex items-center w-full md:mx-20 mx-0 ">
+              <div className="flex items-center justify-center  ">
                 <img
-                  className="h-12 w-12"
+                  className="md:h-16 md:w-16 h-8 w-12"
                   src="/fd360favicon.png"
                   alt="Veteran Owned and operated"
                 />
                 <img
-                  className="h-16 md:w-36"
+                  className="md:h-24 md:w-44 h-12 w-36"
                   src="/fd360veteran-white.png"
                   alt="Logo"
                 />
               </div>
-              <div className="hidden md:block z-50 mx-auto">
-                <div className="flex items-baseline ml-10 space-x-4">
+              <div className="hidden md:block z-50 m-auto">
+                <div className="flex items-baseline ml-10 justify-between space-x-1">
                   <Link
                     activeClass="Home"
                     to="/"
-                    className="px-3 py-2 font-semibold text-white cursor-pointer rounded-md text-md hover:bg-blue-400 "
+                    className="px-3 py-2 font-medium text-green-400 cursor-pointer rounded-md text-md hover:bg-blue-400 "
                   >
                     Home
                   </Link>
                   <button
                     onClick={() => setIsOpen(!isOpen)}
-                    className="px-3 py-2 text-sm font-medium text-white rounded-md cursor-pointer hover:bg-blue-400 hover:text-white"
+                    className="px-3 py-2 text-sm font-medium text-green-400 rounded-md cursor-pointer hover:bg-blue-400 hover:text-green-400"
                   >
                     Services
                   </button>
@@ -74,7 +74,7 @@ function Nav() {
                               alt="Logo"
                             />
                             <div className="text-base font-medium text-green-400">
-                              Managed Network Services
+                              Managed IT Network Services
                             </div>
                           </Link>
                           <Link
@@ -126,7 +126,7 @@ function Nav() {
                     smooth={true}
                     offset={50}
                     duration={500}
-                    className="px-3 py-2 text-sm font-medium text-white rounded-md cursor-pointer hover:bg-blue-400 hover:text-white"
+                    className="px-3 py-2 text-sm font-medium text-green-400 rounded-md cursor-pointer hover:bg-blue-400 hover:text-green-400"
                   >
                     Support
                   </Link>
@@ -137,7 +137,7 @@ function Nav() {
                     smooth={true}
                     offset={50}
                     duration={500}
-                    className="px-3 py-2 text-sm font-medium text-white rounded-md cursor-pointer hover:bg-blue-400 hover:text-white"
+                    className="px-3 py-2 text-sm font-medium text-green-400 rounded-md cursor-pointer hover:bg-blue-400 hover:text-green-400"
                   >
                     Partners
                   </Link>
@@ -148,7 +148,7 @@ function Nav() {
                     smooth={true}
                     offset={50}
                     duration={500}
-                    className="px-3 py-2 text-sm font-medium text-white hover:bg-blue-400 rounded-md cursor-pointer hover:text-white"
+                    className="px-3 py-2 text-sm font-medium text-green-400 hover:bg-blue-400 rounded-md cursor-pointer hover:text-green-400"
                   >
                     About Us
                   </Link>
@@ -158,22 +158,32 @@ function Nav() {
                     smooth={true}
                     offset={50}
                     duration={500}
-                    className="px-3 py-2 text-sm font-medium text-white hover:bg-blue-400 rounded-md cursor-pointer hover:text-white"
+                    className="px-3 py-2 text-sm font-medium text-green-400 hover:bg-blue-400 rounded-md cursor-pointer hover:text-green-400"
                   >
                     Contact Us
                   </Link>
                 </div>
               </div>
             </div>
-            <div className="flex items-center justify-center flex-shrink-0 md:mr-10">
+            <div className="flex items-center justify-center flex-shrink-0 md:mr-5 ">
               {" "}
               <Link
                 activeClass="contact"
-                to="/contact"
+                to="https://webservices.futuredigital360.com/"
                 smooth={true}
                 offset={50}
                 duration={500}
-                className="px-3 py-2 text-sm font-medium text-white hover:bg-blue-400 rounded-md cursor-pointer hover:text-white"
+                className="px-3 py-2 md:text-sm font-medium text-green-400 hover:bg-blue-400 rounded-md cursor-pointer hover:text-green-400 sm:mt-20 md:mt-0 hidden md:block"
+              >
+                Web Service Bill Pay
+              </Link>
+              <Link
+                activeClass="contact"
+                to="https://futuredigital360.billcenter.net/"
+                smooth={true}
+                offset={50}
+                duration={500}
+                className="px-3 py-2 md:text-sm text-xs font-medium text-green-400 hover:bg-blue-400 rounded-md cursor-pointer hover:text-green-400 sm:mt-20 md:mt-0"
               >
                 Customer Bill Pay
               </Link>
@@ -182,7 +192,7 @@ function Nav() {
               <button
                 onClick={() => setIsShowing(!isShowing)}
                 type="button"
-                className="inline-flex items-center justify-center p-2 text-white bg-blue-600 rounded-md hover:bg-blue-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-blue-800 focus:ring-white"
+                className="inline-flex items-center justify-center p-2 text-green-400 bg-blue-600 rounded-md hover:bg-blue-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-blue-800 focus:ring-white"
                 aria-controls="mobile-menu"
                 aria-expanded="false"
               >
@@ -247,13 +257,13 @@ function Nav() {
                   smooth={true}
                   offset={50}
                   duration={500}
-                  className="block px-3 py-2 text-base font-medium text-white rounded-md cursor-pointer hover:bg-blue-400 hover:text-white"
+                  className="block px-3 py-2 text-base font-medium text-green-400 rounded-md cursor-pointer hover:bg-blue-400 hover:text-green-400"
                 >
                   Home
                 </Link>
                 <button
                   onClick={() => setIsOpen(!isOpen)}
-                  className="px-3 py-2 text-sm font-medium text-white rounded-md cursor-pointer hover:bg-blue-400 hover:text-white"
+                  className="px-3 py-2 text-base font-medium text-green-400 rounded-md cursor-pointer hover:bg-blue-400 hover:text-green-400"
                 >
                   Services
                 </button>
@@ -292,7 +302,7 @@ function Nav() {
                             alt="Logo"
                           />
                           <div className="text-base font-medium text-green-400">
-                            Managed Network Services
+                            Managed IT Network Services
                           </div>
                         </Link>
                         <Link
@@ -340,48 +350,44 @@ function Nav() {
                 </Transition>
 
                 <Link
-                  href="/support"
                   activeClass="about"
-                  to="about"
+                  to="/support"
                   smooth={true}
                   offset={50}
                   duration={500}
-                  className="block px-3 py-2 text-base font-medium text-white rounded-md cursor-pointer hover:bg-blue-400 hover:text-white"
+                  className="block px-3 py-2 text-base font-medium text-green-400 rounded-md cursor-pointer hover:bg-blue-400 hover:text-green-400"
                 >
                   Support
                 </Link>
 
                 <Link
-                  href="/work"
                   activeClass="work"
-                  to="work"
+                  to="/partners"
                   smooth={true}
                   offset={50}
                   duration={500}
-                  className="block px-3 py-2 text-base font-medium text-white rounded-md cursor-pointer hover:bg-blue-400 hover:text-white"
+                  className="block px-3 py-2 text-base font-medium text-green-400 rounded-md cursor-pointer hover:bg-blue-400 hover:text-green-400"
                 >
                   Partners
                 </Link>
 
                 <Link
-                  href="/aboutus"
                   activeClass="aboutus"
-                  to="work"
+                  to="/aboutus"
                   smooth={true}
                   offset={50}
                   duration={500}
-                  className="block px-3 py-2 text-base font-medium text-white rounded-md cursor-pointer hover:bg-blue-400 hover:text-white"
+                  className="block px-3 py-2 text-base font-medium text-green-400 rounded-md cursor-pointer hover:bg-blue-400 hover:text-green-400"
                 >
                   About Us
                 </Link>
                 <Link
-                  href="/contactus"
                   activeClass="contact us"
-                  to="contactus"
+                  to="/contactus"
                   smooth={true}
                   offset={50}
                   duration={500}
-                  className="block px-3 py-2 text-base font-medium text-white rounded-md cursor-pointer hover:bg-blue-400 hover:text-white"
+                  className="block px-3 py-2 text-base font-medium text-green-400 rounded-md cursor-pointer hover:bg-blue-400 hover:text-green-400"
                 >
                   Contact Us
                 </Link>

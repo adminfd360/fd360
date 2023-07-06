@@ -13,23 +13,29 @@ import CyberSecurity from "./components/pages/CyberSecurity";
 import Support from "./components/pages/Support";
 import Footer from "./components/Footer";
 import MultiFunctionalProductServices from "./components/pages/MultiFunctionalProductServices";
+import Partners from "./components/pages/Partners";
+import News from "./components/pages/News";
+import Linkus from "./components/pages/Linkus";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <>
     <Router>
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="/aboutus" element={<AboutUs category="zuid" />} />
+        <Route path="/aboutus" element={<AboutUs />} />
         <Route path="/contactus" element={<ContactUs />} />
         <Route path="/communication" element={<CommunicationServices />} />
         <Route path="/managednetwork" element={<ManagedNetwork />} />
         <Route path="/webservices" element={<WebServices />} />
         <Route path="/cybersecurity" element={<CyberSecurity />} />
         <Route path="/support" element={<Support />} />
+        <Route path="/partners" element={<Partners />} />
+        <Route path="/news" element={<News />} />
         <Route
           path="/multifunctional"
           element={<MultiFunctionalProductServices />}
         />
+        <Route path="/linkus" element={<Linkus />} />
       </Routes>
       <Footer />
     </Router>

@@ -1,4 +1,5 @@
 import React from "react";
+import { FaTwitter, FaInstagram, FaFacebookF } from "react-icons/fa";
 import jim from "../assets/team/jim.png";
 import josh from "../assets/team/josh.png";
 import joemarie from "../assets/team/joemarie.png";
@@ -11,22 +12,31 @@ import ron from "../assets/team/ron.png";
 import sharon from "../assets/team/sharon.png";
 import jr from "../assets/team/jr.png";
 import patches from "../assets/team/patches.png";
+import warren from "../assets/team/warren.png";
 import { motion } from "framer-motion";
+import { Tilt } from "react-tilt";
 
 const TeamMember = ({ name, title, image, bio }) => {
   return (
     <div className=" hover:border-double hover:border-4 hover:border-lime-400  h-full grid items-center p-8 ">
-      <motion.img
-        className="w-60 h-60 object-cover rounded-xl "
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        src={image}
-        alt={`${name}'s profile`}
-      />
+      <Tilt>
+        <motion.img
+          className="w-60 h-60 object-cover rounded-xl "
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          transition={{ duration: 0.3 }}
+          variants={{
+            visible: { opacity: 1, scale: 1 },
+            hidden: { opacity: 0, scale: 0 },
+          }}
+          src={image}
+          alt={`${name}'s profile`}
+        />
+      </Tilt>
       <h2 className="mt-4 mb-2 text-xl font-bold text-black">{name}</h2>
-      <p className="mb-4 text-sm text-black">{title}</p>
-      <p className="mb-4 text-xs text-black">{bio}</p>
+      <p className="mb-4 text-sm text-black font-bold">{title}</p>
+      <p className="text-xs text-black">{bio}</p>
       {/* <div className="flex space-x-4">
         <a href="#" className="text-black hover:text-gray-300">
           <FaTwitter />
@@ -54,7 +64,12 @@ const Team = () => {
         </div>
         <div className="mt-10">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <TeamMember name="Jim" title="CEO" image={jim} bio="" />
+            <TeamMember
+              name="Jim"
+              title="CEO - USAF Veteran"
+              image={jim}
+              bio=""
+            />
             <TeamMember
               name="Nikki"
               title="Director of Operations"
@@ -67,7 +82,9 @@ const Team = () => {
               name="Rediza"
               title="Finance & HR Manager"
               image={rediza}
-              bio=""
+              bio="MBA Finance graduate with 5+ years of bookkeeping experience. A certified QBO ProAdvisor. An aspiring US tax preparer and IRS Enrollment Agent.
+              Dealing with numbers or accounting was never my option back then. However, looks like accounting is pushing its way into my life to help me become the person I want to be.
+              On the contrary, I love spending my spare time doing hair and makeup for weddings and special events."
             />
             <TeamMember
               name="Precie"
@@ -86,14 +103,6 @@ const Team = () => {
               "
             />
             <TeamMember
-              name="Josh"
-              title="PSW Field IT/VoIP Network Engineer"
-              image={josh}
-              bio="I have been in this industry for 15 years. I like the growth of technology and seeing how it changes the world. 
-              In my free time, I like to play console games. My hobbies are gardening and taking care of my chickens. Love being with my dog.
-              "
-            />
-            <TeamMember
               name="Lai"
               title="Global IT Support Desk Engineer"
               image={lai}
@@ -105,10 +114,12 @@ const Team = () => {
               name="Ron"
               title="PSW IT Network Engineer"
               image={ron}
-              bio=""
+              bio="I've worked in technology for 5 years. 
+              In my free time, I create web content for my YouTube channel. I play console games, and as a side hustle, I do computer repair and CPE installation and configuration in remote places without an internet connection.
+              "
             />
             <TeamMember
-              name="Joemarie"
+              name="Jomarie"
               title="Team Lead VoIp Engineer"
               image={joemarie}
               bio="IT professional in VoIP telephone system, hardware, networking, and cybersecurity solutions. I like spending time in my shop fixing electronic gadgets, playing around with programmable electronic prototyping boards to create IoT devices.
@@ -136,7 +147,13 @@ const Team = () => {
               name="Patches"
               title="Our Mascot"
               image={patches}
-              bio="Ruv playing outside with my toys. Ruv playing inside with my family and my toys. Ruv snacks and sleeping."
+              bio="Ruv playing outside with my toys. Ruv playing inside with my family and my toys. Ruv snacks and sleeping. Loyal and playful canine companion with wagging tail, wet nose, and endless love to give. Always ready for a good belly rub and a game of fetch. Woof!"
+            />
+            <TeamMember
+              name="Warren"
+              title="Frontend Developer"
+              image={warren}
+              bio="I am a passionate web designer and frontend developer, with a keen eye for detail and a talent for creating visually appealing and user-friendly websites. When I'm not developing websites, I love exploring new places and sample local cuisines. Traveling is one of my favorite hobbies, and I discover hidden gems and iconic landmarks wherever I visit."
             />
           </div>
         </div>
