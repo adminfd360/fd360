@@ -216,9 +216,8 @@ const PDF = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {pdfs.map((pdf) => (
-            <Tilt>
+            <Tilt key={pdf.id}>
               <a
-                key={pdf.id}
                 href={pdf.path}
                 target="_blank"
                 rel="noopener noreferrer"

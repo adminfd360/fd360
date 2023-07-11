@@ -11,7 +11,7 @@ const Partners = () => {
     <>
       <Nav />
       <div className="relative max-w-full h-96 ">
-        <img
+        <motion.img
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}

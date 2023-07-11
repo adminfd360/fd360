@@ -133,7 +133,7 @@ function Nav() {
 
                   <Link
                     activeClass="Partners"
-                    to="/Partners"
+                    to="/partners"
                     smooth={true}
                     offset={50}
                     duration={500}

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import fd360support from "../../assets/fd360support.jpg";
 import Nav from "../navbar/Nav";
@@ -7,14 +8,38 @@ import fd360veteran from "../../assets/fd360Veteranandownedlogo.png";
 import fd360faq from "../../assets/fd360faq.png";
 import FAQ from "./FAQ";
 import PDF from "./pdf";
+import { MdList } from "react-icons/md";
 import "./styles.css";
+
+const ifax = [
+  {
+    title: "Account, Team and Number Setup and Configuration",
+    articles: 16,
+    link: "ifax-account",
+  },
+  {
+    title: "Navigation",
+    articles: 2,
+    link: "ifax-navigation",
+  },
+  {
+    title: "Processing Received Faxes",
+    articles: 4,
+    link: "ifax-processing-received-faxes",
+  },
+  {
+    title: "Sending Faxes",
+    articles: 13,
+    link: "ifax-sending-faxes",
+  },
+];
 const Support = () => {
   return (
     <>
       <div>
         <Nav />
         <div className="relative w-full h-[600px] ">
-          <img
+          <motion.img
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -96,13 +121,32 @@ const Support = () => {
             <motion.img
               src={fd360faq}
               alt="future digital 360 FAQ"
-              className="w-full"
+              className="w-full max-w-[500px] m-auto"
               initial={{ opacity: 0, x: "300vh" }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 2 }}
             />
           </div>
-          <div className="flex-row items-center justify-center ">
+          <div className="flex-row items-center justify-center w-full px-4 lg:px-10 mt-10">
+            <h1 className="md:text-3xl text-xl font-bold mb-4 text-center">
+              iFAX FAQs
+            </h1>
+            <div className="my-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+              {ifax.map((item) => (
+                <Link
+                  key={item.title}
+                  to={item.link}
+                  className="flex justify-center items-center flex-col p-4 bg-white rounded-lg"
+                >
+                  <MdList size="60" />
+                  <h2 className="font-semibold text-lg">{item.title}</h2>
+                  <p className="mt-6">{item.articles} Articles</p>
+                  <p className="text-green-400">Show all</p>
+                </Link>
+              ))}
+            </div>
+          </div>
+          <div className="flex-row items-center justify-center mt-16">
             <h1 className="md:text-3xl text-xl font-bold mb-4 text-center">
               Most Popular FAQs
             </h1>

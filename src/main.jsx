@@ -16,6 +16,11 @@ import MultiFunctionalProductServices from "./components/pages/MultiFunctionalPr
 import Partners from "./components/pages/Partners";
 import News from "./components/pages/News";
 import Linkus from "./components/pages/Linkus";
+import IfaxAccount from "./components/pages/IfaxAccount";
+import Root from "./components/Root";
+import IfaxNavigation from "./components/pages/IfaxNavigation";
+import IfaxProcessing from "./components/pages/IfaxProcessing";
+import IfaxSendingFaxes from "./components/pages/IfaxSendingFaxes";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <>
@@ -28,7 +33,16 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/managednetwork" element={<ManagedNetwork />} />
         <Route path="/webservices" element={<WebServices />} />
         <Route path="/cybersecurity" element={<CyberSecurity />} />
-        <Route path="/support" element={<Support />} />
+        <Route path="/support" element={<Root />}>
+          <Route index element={<Support />} />
+          <Route path="ifax-account" element={<IfaxAccount />} />
+          <Route path="ifax-navigation" element={<IfaxNavigation />} />
+          <Route
+            path="ifax-processing-received-faxes"
+            element={<IfaxProcessing />}
+          />
+          <Route path="ifax-sending-faxes" element={<IfaxSendingFaxes />} />
+        </Route>
         <Route path="/partners" element={<Partners />} />
         <Route path="/news" element={<News />} />
         <Route
