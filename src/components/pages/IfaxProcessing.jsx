@@ -10,6 +10,7 @@ import img3 from "../../assets/ifax/process/img3.webp";
 import img4 from "../../assets/ifax/process/img4.webp";
 import img5 from "../../assets/ifax/process/img5.webp";
 import video1 from "../../assets/ifax/process/video1.mp4";
+import ifaxCover from "../../assets/services/KBcover.avif";
 
 const topics = [
   {
@@ -163,8 +164,16 @@ const IfaxProcessing = () => {
   return (
     <>
       <Nav />
-      <div className="relative max-w-full h-[300px] ">
-        <div className="object-cover w-full h-full grade"></div>
+
+      <div className="relative w-full h-[600px] ">
+        <motion.img
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          src={ifaxCover}
+          alt="knowledge base cover"
+          className="object-cover w-full h-full"
+        />
         <div className="absolute inset-0  flex items-center justify-center">
           <div className="text-white text-center">
             <motion.h1

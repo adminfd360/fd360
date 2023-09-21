@@ -6,6 +6,7 @@ import Accordion from "../Accordion";
 import video from "../../assets/ifax/navigation/ifax-navigation-video.mp4";
 import vid2 from "../../assets/ifax/navigation/2.mp4";
 import vid3 from "../../assets/ifax/navigation/3.mp4";
+import ifaxCover from "../../assets/services/KBcover.avif";
 
 const topics = [
   {
@@ -192,8 +193,16 @@ const IfaxNavigation = () => {
   return (
     <>
       <Nav />
-      <div className="relative max-w-full h-[300px] ">
-        <div className="object-cover w-full h-full grade"></div>
+
+      <div className="relative w-full h-[600px] ">
+        <motion.img
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          src={ifaxCover}
+          alt="knowledge base cover"
+          className="object-cover w-full h-full"
+        />
         <div className="absolute inset-0  flex items-center justify-center">
           <div className="text-white text-center">
             <motion.h1

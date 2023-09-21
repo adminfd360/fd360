@@ -11,6 +11,8 @@ import fd360multifunctional from "./assets/services/fd360multifunctionalproduct.
 import yealink from "./assets/partners/yealink.png";
 import yeastar from "./assets/partners/yeastar.png";
 import lenovo from "./assets/partners/lenovo.png";
+import google from "./assets/partners/google-partner.png";
+import lexmark from "./assets/partners/lexmark_black1.png";
 import StarsCanvas from "./components/Stars";
 import EarthCanvas from "./components/earth";
 import { Link } from "react-router-dom";
@@ -335,7 +337,7 @@ function App() {
           Our Partners
         </motion.h2>
         <motion.div
-          className="md:flex inline-block justify-around"
+          className="flex flex-wrap justify-center items-center"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -345,9 +347,31 @@ function App() {
             hidden: { opacity: 0, scale: 0 },
           }}
         >
-          <img src={yealink} alt="yealink" className="object-contain p-5" />
-          <img src={yeastar} alt="yeastar" className="object-contain p-5" />
-          <img src={lenovo} alt="lenovo" className="object-contain p-5" />
+          <img
+            src={yealink}
+            alt="yealink logo"
+            className="object-contain p-2 md:p-3 lg:p-4 xl:p-5 max-w-full"
+          />
+          <img
+            src={yeastar}
+            alt="yeastar logo"
+            className="object-contain p-2 md:p-3 lg:p-4 xl:p-5 max-w-full"
+          />
+          <img
+            src={lenovo}
+            alt="lenovo logo"
+            className="object-contain p-2 md:p-3 lg:p-4 xl:p-5 max-w-full"
+          />
+          <img
+            src={google}
+            alt="google partner logo"
+            className="object-contain p-2 md:p-3 lg:p-4 xl:p-5 w-60"
+          />
+          <img
+            src={lexmark}
+            alt="lexmark logo"
+            className="object-contain p-2 md:p-3 lg:p-4 xl:p-5 w-60"
+          />
         </motion.div>
       </div>
     </>

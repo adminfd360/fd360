@@ -3,6 +3,7 @@ import Nav from "../navbar/Nav";
 import { motion } from "framer-motion";
 import "./styles.css";
 import Accordion from "../Accordion";
+import ifaxCover from "../../assets/services/KBcover.avif";
 
 import img1 from "../../assets/ifax/sending/img1.webp";
 import img2 from "../../assets/ifax/sending/img2.webp";
@@ -429,8 +430,16 @@ const IfaxSendingFaxes = () => {
   return (
     <>
       <Nav />
-      <div className="relative max-w-full h-[300px] ">
-        <div className="object-cover w-full h-full grade"></div>
+
+      <div className="relative w-full h-[600px] ">
+        <motion.img
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          src={ifaxCover}
+          alt="knowledge base cover"
+          className="object-cover w-full h-full"
+        />
         <div className="absolute inset-0  flex items-center justify-center">
           <div className="text-white text-center">
             <motion.h1
