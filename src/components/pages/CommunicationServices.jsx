@@ -13,6 +13,8 @@ import Footer from "../Footer";
 import fd360veteran_orig from "../../assets/fd360_veteran_original.png";
 import { Transition } from "@headlessui/react";
 import "./styles.css";
+import fd360t31 from "../../assets/services/t31.png";
+import fd360t58w from "../../assets/services/t58w.png";
 
 const CommunicationServices = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -574,7 +576,7 @@ const CommunicationServices = () => {
               Popular Phones
             </h2>
           </div>
-          <div className="mt-4 grid grid-cols-1 md:grid-cols-5 gap-4">
+          <div className="mt-4 grid grid-cols-1 md:grid-cols-4 gap-4">
             <motion.div
               initial="hidden"
               whileInView="visible"
@@ -654,6 +656,38 @@ const CommunicationServices = () => {
                 Dect Ruggedized Wireless phone with base Model W77P
               </h2>
               <img src={fd360W77P} alt="fd360 W77P" className="w-full h-40" />
+            </motion.div>
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              transition={{ duration: 0.3 }}
+              variants={{
+                visible: { opacity: 1, scale: 1 },
+                hidden: { opacity: 0, scale: 0 },
+              }}
+              className="bg-white rounded-md bg-opacity-40 bg-clip-padding backdrop-opacity-50 shadow-lg p-4"
+            >
+              <h2 className="text-gray-800 mt-4 font-custom text-xl mb-2">
+                T58W Pro Smart Business Phone
+              </h2>
+              <img src={fd360t58w} alt="fd360 T58W" className="w-full h-40" />
+            </motion.div>
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              transition={{ duration: 0.3 }}
+              variants={{
+                visible: { opacity: 1, scale: 1 },
+                hidden: { opacity: 0, scale: 0 },
+              }}
+              className="bg-white rounded-md bg-opacity-40 bg-clip-padding backdrop-opacity-50 shadow-lg p-4"
+            >
+              <h2 className="text-gray-800 mt-4 font-custom text-xl">
+                T31 Entry Level Business phone
+              </h2>
+              <img src={fd360t31} alt="fd360 T31" className="w-full h-40" />
             </motion.div>
           </div>
 
