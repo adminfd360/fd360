@@ -7,7 +7,7 @@ function Nav() {
   const [isShowing, setIsShowing] = useState(false);
   return (
     <div>
-      <nav className="absolute z-50 w-full shadow-sm bg-transparent font-custom">
+      <nav className="absolute z-50 w-full shadow-sm bg-transparent font-custom top-0">
         <div className="w-full">
           <div className="flex items-center w-full">
             <div className="flex items-center w-full md:mx-20 mx-0 ">

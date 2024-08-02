@@ -8,7 +8,9 @@ import fd360domain from "../../assets/services/fd360domain.png";
 import fd360hosting from "../../assets/services/fd360hosting.png";
 import fd360management from "../../assets/services/fd360management.png";
 import fd360seo from "../../assets/services/fd360seo.png";
+import chooseTemplates from "../../assets/services/choose-template.png";
 import Footer from "../Footer";
+import { Link } from "react-router-dom";
 
 const WebServices = () => {
   const containerVariants = {
@@ -354,8 +356,6 @@ const WebServices = () => {
                   className="mx-auto"
                 />
               </div>
-            </div>
-            <div className="grid max-w-3xl grid-cols-1 mx-auto">
               <div className="bg-white rounded-md bg-opacity-40 bg-clip-padding backdrop-opacity-50 shadow-lg p-4 ">
                 <motion.h2
                   className="text-gray-700 mt-4 font-custom text-2xl mx-auto"
@@ -410,6 +410,39 @@ const WebServices = () => {
                   </motion.p>
                 </motion.h2>
               </div>
+
+              <div className="bg-white rounded-md bg-opacity-40 bg-clip-padding backdrop-opacity-50 shadow-lg p-4 ">
+                <motion.h2
+                  className="text-gray-700 mt-4 font-custom text-2xl mx-auto"
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.3 }}
+                  variants={{
+                    visible: { opacity: 1, scale: 1 },
+                    hidden: { opacity: 0, scale: 0 },
+                  }}
+                >
+                  Templates
+                  <br />
+                  <motion.img
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.3 }}
+                    variants={{
+                      visible: { opacity: 1, scale: 1 },
+                      hidden: { opacity: 0, scale: 0 },
+                    }}
+                    src={chooseTemplates}
+                    alt="fd360-seo"
+                    className="mx-auto w-[250px] h-auto mt-8 mb-10"
+                  />
+                  Explore our diverse range of website template designs to find the perfect match for your brand—whether you're seeking sleek professionalism or vibrant creativity, we have a design tailored to elevate your online presence.
+                </motion.h2>
+                <Link className="bg-blue-500 hover:bg-blue-700 text-white font-bold block max-w-[250px] mx-auto py-2 px-4 rounded mb-5 mt-12" to={'/webservices/templates'}>Check our templates</Link>
+              </div>
+
             </div>
           </div>
         </div>

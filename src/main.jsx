@@ -21,6 +21,7 @@ import Root from "./components/Root";
 import IfaxNavigation from "./components/pages/IfaxNavigation";
 import IfaxProcessing from "./components/pages/IfaxProcessing";
 import IfaxSendingFaxes from "./components/pages/IfaxSendingFaxes";
+import Templates from "./components/pages/Templates";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <>
@@ -31,7 +32,10 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/contactus" element={<ContactUs />} />
         <Route path="/communication" element={<CommunicationServices />} />
         <Route path="/managednetwork" element={<ManagedNetwork />} />
-        <Route path="/webservices" element={<WebServices />} />
+        <Route path="/webservices" element={<Root />}>
+          <Route index element={<WebServices />} />
+          <Route path="templates" element={<Templates />} />
+        </Route>
         <Route path="/cybersecurity" element={<CyberSecurity />} />
         <Route path="/support" element={<Root />}>
           <Route index element={<Support />} />
