@@ -28,7 +28,7 @@ const Footer = () => {
             We search so you don't have to. Stay up to date with us for all your
             business needs
           </p>
-          <a href="/news">
+          <a target="_blank" href="https://blogs.futuredigital360.com/">
             <button className="bg-blue-700 p-2 rounded-lg mb-5 text-white">
               Latest News!
             </button>
