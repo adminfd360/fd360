@@ -30,3 +30,14 @@ body,
   animation: mulShdSpin 1.1s infinite ease;
   transform: translateZ(0);
 }
+
+iframe.bpFab {
+  width: 55px;
+  height: 55px;
+  border-radius: 0px;
+  box-shadow: none;
+}
+
+iframe.bpFab:hover {
+  box-shadow: none;
+}
