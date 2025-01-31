@@ -7,6 +7,7 @@ import yeastar from "../../assets/partners/yeastar.png";
 import lenovo from "../../assets/partners/lenovo.png";
 import google from "../../assets/partners/google-partner.png";
 import lexmark from "../../assets/partners/lexmark_black1.png";
+import microsoft from '../../assets/partners/ms-logo.webp'
 
 const Partners = () => {
   return (
@@ -50,7 +51,7 @@ const Partners = () => {
           Our Partners
         </motion.h2>
         <motion.div
-          className="flex flex-wrap justify-center items-center"
+          className="flex flex-wrap justify-center items-center gap-10 lg:gap-5"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -83,6 +84,11 @@ const Partners = () => {
           <img
             src={lexmark}
             alt="lexmark partner logo"
+            className="object-contain p-2 md:p-3 lg:p-4 xl:p-5 w-60"
+          />
+          <img
+            src={microsoft}
+            alt="ms partner logo"
             className="object-contain p-2 md:p-3 lg:p-4 xl:p-5 w-60"
           />
         </motion.div>

@@ -22,6 +22,7 @@ import IfaxNavigation from "./components/pages/IfaxNavigation";
 import IfaxProcessing from "./components/pages/IfaxProcessing";
 import IfaxSendingFaxes from "./components/pages/IfaxSendingFaxes";
 import Templates from "./components/pages/Templates";
+import TermsConditions from "./components/pages/TermsConditions";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <>
@@ -54,6 +55,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           element={<MultiFunctionalProductServices />}
         />
         <Route path="/linkus" element={<Linkus />} />
+        <Route path="/terms-condition" element={<TermsConditions />} />
       </Routes>
       <Footer />
     </Router>
