@@ -4,7 +4,7 @@ import App from "./App";
 import AboutUs from "./components/pages/AboutUs";
 import ContactUs from "./components/pages/ContactUs";
 import "./index.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import CommunicationServices from "./components/pages/CommunicationServices";
 import ManagedNetwork from "./components/pages/ManagedNetwork";
@@ -23,6 +23,8 @@ import IfaxProcessing from "./components/pages/IfaxProcessing";
 import IfaxSendingFaxes from "./components/pages/IfaxSendingFaxes";
 import Templates from "./components/pages/Templates";
 import TermsConditions from "./components/pages/TermsConditions";
+
+const RedirectPage = () => <Navigate to='/terms-condition' />
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <>
@@ -56,6 +58,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         />
         <Route path="/linkus" element={<Linkus />} />
         <Route path="/terms-condition" element={<TermsConditions />} />
+        <Route path="/pricing/terms-condition" element={<RedirectPage />} />
       </Routes>
       <Footer />
     </Router>
