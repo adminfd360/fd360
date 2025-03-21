@@ -1,20 +1,20 @@
 import { Tilt } from "react-tilt";
-import t31p from "../../assets/pdf/t31p.pdf";
-import t31p_img from "../../assets/pdf/t31p.png";
+import t31p from "../../assets/pdf/T31P.pdf";
+import t31p_img from "../../assets/pdf/T31P.png";
 import w70b from "../../assets/pdf/w70b.pdf";
 import w70b_img from "../../assets/pdf/w70b.png";
 import Yealink_T31_T31P_T31G_QSG from "../../assets/pdf/Yealink_T31_T31P_T31G_QSG.pdf";
 import Yealink_T31_T31P_T31G_QSG_img from "../../assets/pdf/Yealink_T31_T31P_T31G_QSG.png";
-import w60p_img from "../../assets/pdf/w60p.png";
-import w60p from "../../assets/pdf/w60p.pdf";
-import t54w from "../../assets/pdf/t54w.pdf";
-import t54w_img from "../../assets/pdf/t54w.png";
-import w76p from "../../assets/pdf/w76p.pdf";
-import w76p_img from "../../assets/pdf/w76p.png";
-import t53w from "../../assets/pdf/t53w.pdf";
-import t53w_img from "../../assets/pdf/t53w.png";
-import lorex_e841ca_img from "../../assets/pdf/lorex_e841ca.png";
-import lorex_e841ca from "../../assets/pdf/lorex_e841ca.pdf";
+import w60p_img from "../../assets/pdf/W60P.png";
+import w60p from "../../assets/pdf/W60P.pdf";
+import t54w from "../../assets/pdf/T54W.pdf";
+import t54w_img from "../../assets/pdf/T54W.png";
+import w76p from "../../assets/pdf/W76P.pdf";
+import w76p_img from "../../assets/pdf/W76P.png";
+import t53w from "../../assets/pdf/T53W.pdf";
+import t53w_img from "../../assets/pdf/T53W.png";
+import lorex_e841ca_img from "../../assets/pdf/Lorex_E841CA.png";
+import lorex_e841ca from "../../assets/pdf/Lorex_E841CA.pdf";
 import Lorex_E841CA_with_cover from "../../assets/pdf/Lorex_E841CA_with_cover.pdf";
 import Lorex_E841CA_with_cover_img from "../../assets/pdf/Lorex_E841CA_with_cover.png";
 import Lorex_without_cover from "../../assets/pdf/Lorex_without_cover.pdf";
@@ -33,8 +33,6 @@ import Standard_VoIP_HD_Standard_Phones from "../../assets/pdf/Standard_VoIP_HD_
 import Standard_VoIP_HD_Standard_Phones_img from "../../assets/pdf/Standard_VoIP_HD_Standard_Phones.png";
 import VoIP_HD_Microsoft_Teams_Phones from "../../assets/pdf/VoIP_HD_Microsoft_Teams_Phones.pdf";
 import VoIP_HD_Microsoft_Teams_Phones_img from "../../assets/pdf/VoIP_HD_Microsoft_Teams_Phones.png";
-import Web_Services_SEO from "../../assets/pdf/Web_Services_SEO.pdf";
-import Web_Services_SEO_img from "../../assets/pdf/Web_Services_SEO.png";
 import IVRP_Annual from "../../assets/pdf/IVRP_Annual.pdf";
 import IVRP_Annual_img from "../../assets/pdf/IVRP_Annual.png";
 import Local_SEO from "../../assets/pdf/Local_SEO.pdf";
@@ -212,16 +210,16 @@ const PDF = () => {
   return (
     <>
       <div className="bg-gradient-to-t from-[#d2ffff] to-[#0694c6] rounded-lg p-6">
-        <h2 className="text-2xl font-bold mb-4 text-center">PDF guides</h2>
+        <h2 className="mb-4 text-2xl font-bold text-center">PDF guides</h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {pdfs.map((pdf) => (
             <Tilt key={pdf.id}>
               <a
                 href={pdf.path}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl"
+                className="block overflow-hidden bg-white rounded-lg shadow-lg hover:shadow-xl"
               >
                 <img
                   src={pdf.img}
@@ -229,10 +227,10 @@ const PDF = () => {
                   className="w-full h-[600px] object-contain rounded-lg p-5"
                 />
                 <div className="p-4 ">
-                  <h3 className="text-lg font-bold mb-2 uppercase">
+                  <h3 className="mb-2 text-lg font-bold uppercase">
                     {pdf.name}
                   </h3>
-                  <p className="text-gray-700 text-base">User Guide</p>
+                  <p className="text-base text-gray-700">User Guide</p>
                 </div>
               </a>
             </Tilt>
