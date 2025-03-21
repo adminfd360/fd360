@@ -1,7 +1,5 @@
 import React from "react";
-import { FaTwitter, FaInstagram, FaFacebookF } from "react-icons/fa";
 import jim from "../assets/team/jim.png";
-import josh from "../assets/team/josh.png";
 import joemarie from "../assets/team/joemarie.png";
 import lai from "../assets/team/lai.png";
 import nikki from "../assets/team/nikki.png";
@@ -18,10 +16,10 @@ import { Tilt } from "react-tilt";
 
 const TeamMember = ({ name, title, image, bio }) => {
   return (
-    <div className=" hover:border-double hover:border-4 hover:border-lime-400  h-full grid items-center p-8 ">
+    <div className="grid items-center h-full p-8  hover:border-double hover:border-4 hover:border-lime-400">
       <Tilt>
         <motion.img
-          className="w-60 h-60 object-cover rounded-xl "
+          className="object-cover w-60 h-60 rounded-xl "
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -35,7 +33,7 @@ const TeamMember = ({ name, title, image, bio }) => {
         />
       </Tilt>
       <h2 className="mt-4 mb-2 text-xl font-bold text-black">{name}</h2>
-      <p className="mb-4 text-sm text-black font-bold">{title}</p>
+      <p className="mb-4 text-sm font-bold text-black">{title}</p>
       <p className="text-xs text-black">{bio}</p>
       {/* <div className="flex space-x-4">
         <a href="#" className="text-black hover:text-gray-300">
@@ -54,8 +52,8 @@ const TeamMember = ({ name, title, image, bio }) => {
 
 const Team = () => {
   return (
-    <div className="bg-gray-100 py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="py-12 bg-gray-100">
+      <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="text-3xl font-extrabold text-gray-900">
             Meet Our Leaders
@@ -63,7 +61,7 @@ const Team = () => {
           <p className="mt-4 text-lg text-gray-500"></p>
         </div>
         <div className="mt-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             <TeamMember
               name="Jim"
               title="CEO - USAF Veteran"
