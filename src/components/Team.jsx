@@ -1,13 +1,13 @@
 import React from "react";
-import jim from "../assets/team/jim.png";
+import jim from "../assets/team/Jim.png";
 import joemarie from "../assets/team/joemarie.png";
-import lai from "../assets/team/lai.png";
-import nikki from "../assets/team/nikki.png";
+import lai from "../assets/team/Lai.png";
+import nikki from "../assets/team/Nikki.png";
 import precie from "../assets/team/precie.png";
-import rediza from "../assets/team/rediza.png";
-import rem from "../assets/team/rem.png";
-import ron from "../assets/team/ron.png";
-import sharon from "../assets/team/sharon.png";
+import rediza from "../assets/team/Rediza.png";
+import rem from "../assets/team/Rem.png";
+import ron from "../assets/team/Ron.png";
+import sharon from "../assets/team/Sharon.png";
 import jr from "../assets/team/jr.png";
 import patches from "../assets/team/patches.png";
 import warren from "../assets/team/warren.png";
@@ -16,7 +16,7 @@ import { Tilt } from "react-tilt";
 
 const TeamMember = ({ name, title, image, bio }) => {
   return (
-    <div className="grid items-center h-full p-8  hover:border-double hover:border-4 hover:border-lime-400">
+    <div className="grid items-center h-full p-8 hover:border-double hover:border-4 hover:border-lime-400">
       <Tilt>
         <motion.img
           className="object-cover w-60 h-60 rounded-xl "
