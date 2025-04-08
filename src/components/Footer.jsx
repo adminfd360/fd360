@@ -1,6 +1,6 @@
 import React from "react";
 import fd360fb from "../assets/Socials/fd360fb.png";
-import fd360twitter from "../assets/Socials/fd360twitter.png";
+import fd360twitter from "../assets/Socials/x-logo.png";
 import fd360insta from "../assets/Socials/fd360instagram.png";
 import fd360yt from "../assets/Socials/fd360youtube.png";
 import fd360linkedin from "../assets/Socials/fd360linkedin.png";
