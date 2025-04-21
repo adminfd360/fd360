@@ -41,3 +41,25 @@ iframe.bpFab {
 iframe.bpFab:hover {
   box-shadow: none;
 }
+
+.glow_white {
+  animation: 2s linear 0s infinite normal none running glow_ffffff_2;
+}
+
+@keyframes glow_ffffff_2 {
+  0% {
+    box-shadow: none;
+  }
+  37.5% {
+    box-shadow: none;
+  }
+  50% {
+    box-shadow: 0 0 8px 5px #ffffff;
+  }
+  62.5% {
+    box-shadow: none;
+  }
+  100% {
+    box-shadow: none;
+  }
+}

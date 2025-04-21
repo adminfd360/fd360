@@ -13,7 +13,7 @@ import yeastar from "./assets/partners/yeastar.png";
 import lenovo from "./assets/partners/lenovo.png";
 import google from "./assets/partners/google-partner.png";
 import lexmark from "./assets/partners/lexmark_black1.png";
-import microsoft from './assets/partners/ms-logo.webp'
+import microsoft from "./assets/partners/ms-logo.webp";
 import StarsCanvas from "./components/Stars";
 import EarthCanvas from "./components/earth";
 import { Link } from "react-router-dom";
