@@ -736,7 +736,7 @@ const CommunicationServices = () => {
                 <br />• Caller ID
                 <br />• Audio Conferencing
                 <br />• Speed Dial
-                <br />• Software Phone/ Desktop App
+                {/* <br />• Software Phone/ Desktop App */}
               </p>
             </motion.div>
             <motion.div
@@ -782,6 +782,8 @@ const CommunicationServices = () => {
                 <br />• Call Recording
                 <br />• Software Phone/Desktop App
                 <br />• Call Barge, Listen, Coach
+                <br />• CRM Integration
+                <br />• Toll – Free Number for Free
               </p>
             </motion.div>
             <motion.div
