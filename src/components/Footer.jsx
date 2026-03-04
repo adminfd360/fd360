@@ -9,17 +9,22 @@ import fd360footer from "../assets/fd360footer.jpg";
 import fd360logo from "../assets/FD360-with-website.png";
 import fd360veteran from "../assets/fd360veteran-white.png";
 import fd360veteran_orig from "../assets/fd360_veteran_original.png";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <footer
-      className="font-custom bg-cover bg-center bg-no-repeat md:h-96 flex flex-col items-center justify-center p-5"
+      className="font-custom bg-cover bg-center bg-no-repeat flex flex-col items-center justify-center pt-5"
       style={{
         backgroundImage: `url(${fd360footer})`,
         backgroundPosition: "center bottom",
       }}
     >
-      <div className="flex flex-col sm:flex-row justify-center items-center w-full h-full p-10">
+      <div className="flex flex-col sm:flex-row justify-center items-center w-full h-full p-5 md:p-10">
         <div className="flex flex-col md:w-1/3 w-full justify-center text-center md:items-center items-center text-black font-bold mb-6 sm:mb-0 sm:mr-10 bg-white rounded-md bg-opacity-50 bg-clip-padding backdrop-opacity-50 h-full p-10">
           <h4 className="text-2xl text-blue-700 font-bold mb-5">
             Emerging Technology News & Updates
@@ -107,6 +112,32 @@ const Footer = () => {
               </a>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div className="bg-black/50 w-full pt-2 pb-5">
+        <div className="flex flex-col md:flex-row items-center justify-between max-w-[1280px] mx-auto gap-2">
+          <div className="flex gap-4">
+            <Link
+              className="text-white underline"
+              to="/terms-of-service"
+              onClick={scrollToTop}
+            >
+              Terms of Service
+            </Link>{" "}
+            <span className="text-white">|</span>
+            <Link
+              className="text-white underline"
+              to="/privacy-policy"
+              onClick={scrollToTop}
+            >
+              Privacy Policy
+            </Link>
+          </div>
+          <p className="text-white">
+            &copy; {new Date().getFullYear()} Future Digital 360. All rights
+            reserved.
+          </p>
         </div>
       </div>
     </footer>

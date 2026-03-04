@@ -28,9 +28,11 @@ import IfaxProcessing from "./components/pages/IfaxProcessing";
 import IfaxSendingFaxes from "./components/pages/IfaxSendingFaxes";
 import Templates from "./components/pages/Templates";
 import TermsConditions from "./components/pages/TermsConditions";
+import TermsOfService from "./components/pages/TermsOfService";
+import PrivacyPolicy from "./components/pages/PrivacyPolicy";
 
-const TranslationApp = React.lazy(() =>
-  import("./components/pages/TranslationApp")
+const TranslationApp = React.lazy(
+  () => import("./components/pages/TranslationApp"),
 );
 
 const RedirectPage = () => <Navigate to="/terms-condition" />;
@@ -67,10 +69,12 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         />
         <Route path="/linkus" element={<Linkus />} />
         <Route path="/terms-condition" element={<TermsConditions />} />
+        <Route path="/terms-of-service" element={<TermsOfService />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/pricing/terms-condition" element={<RedirectPage />} />
         <Route path="/translation-app" element={<TranslationApp />} />
       </Routes>
       <Footer />
     </Router>
-  </>
+  </>,
 );
