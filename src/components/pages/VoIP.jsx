@@ -39,11 +39,17 @@ const VoIP = () => {
             </p>
             <p className="leading-7 mt-4">
               Voicemail PIN: (your initial PIN is provided to you during your
-              onboarding experience, if you do not have this please email us at
-              <a href="mailto:support@futuredigital360.com">
+              onboarding experience, if you do not have this please email us at{" "}
+              <a
+                className="text-blue-500"
+                href="mailto:support@futuredigital360.com"
+              >
                 support@futuredigital360.com
               </a>{" "}
-              or you can text us at <a href="tel:4808096334">480-809-6334</a>
+              or you can text us at{" "}
+              <a className="text-blue-500" href="tel:4808096334">
+                480-809-6334
+              </a>
             </p>
             <p className="leading-7 mt-4">
               You can either press *2 and the extension number on the dial pad
