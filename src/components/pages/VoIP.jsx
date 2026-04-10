@@ -113,6 +113,35 @@ const VoIP = () => {
               </li>
             </ul>
           </div>
+
+          <div className="mb-8">
+            <h2 className="font-semibold mb-1 mt-8 text-lg">
+              Important reminders:
+            </h2>
+            <p className="leading-7 mt-2">
+              Login Link for Linkus Mobile and Desktop Client: the login link is
+              valid for 1 day(s) and can be used once only.
+            </p>
+            <p className="leading-7 mt-2">
+              QR Code for Linkus Mobile Client: the QR Code is valid for 1
+              day(s) and can be used once only.
+            </p>
+            <p className="leading-7 mt-2">
+              If your link and/or QR code is not valid, email{" "}
+              <a
+                className="text-blue-500"
+                href="mailto:support@futuredigital360.com"
+              >
+                support@futuredigital360.com
+              </a>{" "}
+              with your extension number or email address that needs this
+              information so that we can resend it, or you may text us at{" "}
+              <a className="text-blue-500" href="tel:4808096334">
+                480-809-6334
+              </a>{" "}
+              with this information.
+            </p>
+          </div>
         </div>
       </div>
     </>
