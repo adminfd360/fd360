@@ -30,6 +30,7 @@ import Templates from "./components/pages/Templates";
 import TermsConditions from "./components/pages/TermsConditions";
 import TermsOfService from "./components/pages/TermsOfService";
 import PrivacyPolicy from "./components/pages/PrivacyPolicy";
+import VoIP from "./components/pages/VoIP";
 
 const TranslationApp = React.lazy(
   () => import("./components/pages/TranslationApp"),
@@ -55,6 +56,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           <Route index element={<Support />} />
           <Route path="ifax-account" element={<IfaxAccount />} />
           <Route path="ifax-navigation" element={<IfaxNavigation />} />
+          <Route path="ifax-account" element={<IfaxAccount />} />
+          <Route path="linkus-client" element={<VoIP />} />
           <Route
             path="ifax-processing-received-faxes"
             element={<IfaxProcessing />}
