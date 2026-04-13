@@ -1,7 +1,12 @@
+import { useLayoutEffect } from "react";
 import Nav from "../navbar/Nav";
 import banner from "./assets/privacy-banner.webp";
 
 const PrivacyPolicy = () => {
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <div
