@@ -24,6 +24,7 @@ const ContactUs = () => {
   });
   const [agreeMarketingEmail, setAgreeMarketingEmail] = useState(false);
   const [smsOptIn, setSmsOptIn] = useState(false);
+  const [smsConsent, setSmsConsent] = useState(false);
   const [loading, setLoading] = useState(false);
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -50,6 +51,7 @@ const ContactUs = () => {
           message: form.message,
           phone: form.phone.trim() || "Not provided",
           sms_opt_in: smsOptIn ? "Yes" : "No",
+          sms_consent: smsConsent ? "Yes" : "No",
           email_marketing_opt_in: agreeMarketingEmail ? "Yes" : "No",
         },
         "kIFlBerOhBTDlxfoC",
@@ -63,6 +65,7 @@ const ContactUs = () => {
           setForm({ name: "", email: "", phone: "", message: "" });
           setAgreeMarketingEmail(false);
           setSmsOptIn(false);
+          setSmsConsent(false);
         },
         (error) => {
           setLoading(false);
@@ -351,6 +354,36 @@ const ContactUs = () => {
                           I want to receive optional SMS messages from Future
                           Digital 360 as described above (not required to submit
                           this form).
+                        </span>
+                      </label>
+
+                      <label className="flex items-start gap-2.5 text-sm text-slate-800 cursor-pointer leading-snug">
+                        <input
+                          type="checkbox"
+                          className="mt-0.5 shrink-0 h-4 w-4 rounded border-slate-400 text-cyan-600 focus:ring-cyan-500"
+                          checked={smsConsent}
+                          onChange={(e) => setSmsConsent(e.target.checked)}
+                        />
+                        <span>
+                          By checking this box, I consent to receive SMS from
+                          Future Digital 360. Reply <strong>STOP</strong> to
+                          opt-out; Reply <strong>HELP</strong> for support;
+                          Message &amp; data rates may apply; Messaging
+                          frequency may vary. View our{" "}
+                          <Link
+                            to="/privacy-policy"
+                            className="text-cyan-700 underline font-medium hover:text-cyan-900"
+                          >
+                            Privacy Policy
+                          </Link>{" "}
+                          and{" "}
+                          <Link
+                            to="/terms-of-service"
+                            className="text-cyan-700 underline font-medium hover:text-cyan-900"
+                          >
+                            Terms of Service
+                          </Link>
+                          .
                         </span>
                       </label>
                     </div>
